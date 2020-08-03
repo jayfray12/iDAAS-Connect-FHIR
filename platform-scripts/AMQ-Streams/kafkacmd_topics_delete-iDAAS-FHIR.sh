@@ -1,7 +1,7 @@
 kafkaDir=$HOME'/RedHatTech/kafka_2.12-2.5.0.redhat-00003'
 echo "Directory: "$kafkaDir
 cd $kafkaDir
-
+bin/kafka-topics.sh --delete --topic opsmgmt_platformtransactions &
 ## FHIR Third Party Server Integration
 ## Enterprise Level Topics by Message Trigger
 ## Application: Integration with Partner FHIR Server
