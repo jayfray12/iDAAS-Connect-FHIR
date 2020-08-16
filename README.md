@@ -49,7 +49,7 @@ Automated Builds are going to be done in Azure Pipelines
 
 ## Ongoing Enhancements
 We maintain all enhancements within the Git Hub portal under the 
-<a href="https://github.com/RedHat-Healthcare/iDAAS-Connect-FHIR/projects" target="_blank">issues tab</a>projects tab 
+<a href="https://github.com/RedHat-Healthcare/iDAAS-Connect-FHIR/projects" target="_blank">projects tab</a>
 
 ## Defects/Bugs
 All defects or bugs should be submitted through the Git Hub Portal under the 
