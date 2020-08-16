@@ -2,7 +2,7 @@
 iDAAS has several key components that provide many capabilities. iDAAS Connect is intended ONLY
 to enable iDAAS connectivity. iDAAS-Connect-FHIR specifically ONLY deals with enabling 
 iDAAS to process the healthcare industry standard FHIR based resources ONLY. Here is the 
-<a http="https://www.hl7.org/fhir/resourcelist.html" target="_blank">current FHIR Resource List</a> 
+<a href="https://www.hl7.org/fhir/resourcelist.html" target="_blank">current FHIR Resource List</a> 
 It will process over 60+ of the currently available resources - around 40 clinical FHIR 
 resources, all the financial public health and research/evidence based medicine/and quality
 reporting and testing resources.
