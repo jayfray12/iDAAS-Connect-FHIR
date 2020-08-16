@@ -5,7 +5,8 @@ iDAAS to process the healthcare industry standard FHIR based resources ONLY. Her
 <a href="https://www.hl7.org/fhir/resourcelist.html" target="_blank">current FHIR Resource List</a> 
 It will process over 60+ of the currently available resources - around 40 clinical FHIR 
 resources, all the financial public health and research/evidence based medicine/and quality
-reporting and testing resources.
+reporting and testing resources. You can also find a list of the 
+<a href="http://connectedhealth-idaas.io/home/SupportedTransactions" target="_blank">platforms supported transactions</a> 
 
 This solution contains three supporting directories. The intent of these artifacts to enable
 resources to work locally: <br/>
@@ -47,18 +48,15 @@ Additionally, there is a copy statement to remove any specific version, so it ou
 Automated Builds are going to be done in Azure Pipelines
 
 ## Ongoing Enhancements
-We maintain all enhancements within the Git Hub portal under the projects tab at 
-https://github.com/RedHat-Healthcare/iDAAS-Connect-FHIR/projects:
-
-Configuration Enablement
-https://github.com/RedHat-Healthcare/iDAAS-Connect-FHIR/projects/
+We maintain all enhancements within the Git Hub portal under the 
+<a href="https://github.com/RedHat-Healthcare/iDAAS-Connect-FHIR/projects" target="_blank">issues tab</a>projects tab 
 
 ## Defects/Bugs
-All defects or bugs should be submitted through the Git Hub Portal under the issues tab at 
-https://github.com/RedHat-Healthcare/iDAAS-Connect-FHIR/issues
+All defects or bugs should be submitted through the Git Hub Portal under the 
+<a href="https://github.com/RedHat-Healthcare/iDAAS-Connect-FHIR/issues" target="_blank">issues tab</a>
 
 ## Chat and Collaboration
-You can always leverage Red Hat Healthcare's ZuilpChat area at https://redhathealthcare.zulipchat.com
+You can always leverage <a href="https://redhathealthcare.zulipchat.com" target="_blank">Red Hat Healthcare's ZuilpChat area</a>
 and find all the specific areas for iDAAS-Connect-FHIR. We look forward to any feedback!!
 
 If you would like to contribute feel free to, contributions are always welcome!!!! 
