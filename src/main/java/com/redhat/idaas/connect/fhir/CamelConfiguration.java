@@ -19,6 +19,7 @@ package com.redhat.idaas.connect.fhir;
 import ca.uhn.fhir.store.IAuditDataStore;
 import org.apache.camel.ExchangePattern;
 import org.apache.camel.LoggingLevel;
+import org.apache.camel.MultipleConsumersSupport;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.hl7.HL7;
 import org.apache.camel.component.hl7.HL7MLLPNettyDecoderFactory;
@@ -40,7 +41,7 @@ public class CamelConfiguration extends RouteBuilder {
   private static final Logger log = LoggerFactory.getLogger(CamelConfiguration.class);
 
   @Bean
-  private kafkaEndpoint(){
+  private KafkaEndpoint kafkaEndpoint(){
     KafkaEndpoint kafkaEndpoint = new KafkaEndpoint();
     return kafkaEndpoint;
   }
