@@ -40,7 +40,7 @@ public class CamelConfiguration extends RouteBuilder {
   private static final Logger log = LoggerFactory.getLogger(CamelConfiguration.class);
 
   @Bean
-  private KafkaEndpoint kafkaEndpoint(){
+  private kafkaEndpoint(){
     KafkaEndpoint kafkaEndpoint = new KafkaEndpoint();
     return kafkaEndpoint;
   }
@@ -105,7 +105,7 @@ public class CamelConfiguration extends RouteBuilder {
         // set Auditing Properties
         .convertBodyTo(String.class)
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("AdverseEvent")
         .setProperty("component").simple("${routeId}")
@@ -126,7 +126,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("adverseevents")
         //.setProperty("component").simple("${routeId}")
@@ -144,7 +144,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("messagetrigger").constant("AllergyIntollerance")
         .setProperty("component").simple("${routeId}")
         .setProperty("camelID").simple("${camelId}")
@@ -163,7 +163,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("allergyintollerance")
         //.setProperty("component").simple("${routeId}")
@@ -181,7 +181,7 @@ public class CamelConfiguration extends RouteBuilder {
          .convertBodyTo(String.class)
          // set Auditing Properties
          .setProperty("processingtype").constant("data")
-         .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+         .setProperty("appname").constant("iDAAS-Connect-FHIR")
          .setProperty("industrystd").constant("FHIR")
          .setProperty("messagetrigger").constant("Appointment")
          .setProperty("component").simple("${routeId}")
@@ -201,7 +201,7 @@ public class CamelConfiguration extends RouteBuilder {
          //.convertBodyTo(String.class)
          // set Auditing Properties
          //.setProperty("processingtype").constant("data")
-         //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+         //.setProperty("appname").constant("iDAAS-Connect-FHIR")
          //.setProperty("industrystd").constant("FHIR")
          //.setProperty("messagetrigger").constant("appointment")
          //.setProperty("component").simple("${routeId}")
@@ -219,7 +219,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("AppointmentResponse")
         .setProperty("component").simple("${routeId}")
@@ -239,7 +239,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("appointmentresponse")
         //.setProperty("component").simple("${routeId}")
@@ -257,7 +257,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("CarePlan")
         .setProperty("component").simple("${routeId}")
@@ -277,7 +277,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("careplan")
         //.setProperty("component").simple("${routeId}")
@@ -295,7 +295,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("CareTeam")
         .setProperty("component").simple("${routeId}")
@@ -315,7 +315,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("careteam")
         //.setProperty("component").simple("${routeId}")
@@ -335,7 +335,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("CodeSystem")
         .setProperty("component").simple("${routeId}")
@@ -355,7 +355,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("codesystem")
         //.setProperty("component").simple("${routeId}")
@@ -373,7 +373,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("Consent")
         .setProperty("component").simple("${routeId}")
@@ -393,7 +393,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("consent")
         //.setProperty("component").simple("${routeId}")
@@ -411,7 +411,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("ClinicalImpression")
         .setProperty("component").simple("${routeId}")
@@ -431,7 +431,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("clinicalimpression")
         //.setProperty("component").simple("${routeId}")
@@ -449,7 +449,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("Communication")
         .setProperty("component").simple("${routeId}")
@@ -469,7 +469,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("communication")
         //.setProperty("component").simple("${routeId}")
@@ -487,7 +487,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("Condition")
         .setProperty("component").simple("${routeId}")
@@ -507,7 +507,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("condition")
         //.setProperty("component").simple("${routeId}")
@@ -525,7 +525,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("DetectedIssue")
         .setProperty("component").simple("${routeId}")
@@ -545,7 +545,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("detectedissue")
         //.setProperty("component").simple("${routeId}")
@@ -563,7 +563,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("Device")
         .setProperty("component").simple("${routeId}")
@@ -583,7 +583,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("device")
         //.setProperty("component").simple("${routeId}")
@@ -601,7 +601,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("DeviceRequest")
         .setProperty("component").simple("${routeId}")
@@ -621,7 +621,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("devicerequest")
         //.setProperty("component").simple("${routeId}")
@@ -639,7 +639,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("DeviceUseStatement")
         .setProperty("component").simple("${routeId}")
@@ -659,7 +659,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("deviceusestatement")
         //.setProperty("component").simple("${routeId}")
@@ -672,12 +672,50 @@ public class CamelConfiguration extends RouteBuilder {
         // iDAAS DataHub Processing
         //.wireTap("direct:auditing")
     ;
+    from("servlet://diagnosticreport")
+        .routeId("FHIRDiagnosticReport")
+        .convertBodyTo(String.class)
+        // set Auditing Properties
+        .setProperty("processingtype").constant("data")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
+        .setProperty("industrystd").constant("FHIR")
+        .setProperty("messagetrigger").constant("DiagnosticReport")
+        .setProperty("component").simple("${routeId}")
+        .setProperty("camelID").simple("${camelId}")
+        .setProperty("exchangeID").simple("${exchangeId}")
+        .setProperty("internalMsgID").simple("${id}")
+        .setProperty("bodyData").simple("${body}")
+        .setProperty("processname").constant("Input")
+        .setProperty("auditdetails").constant("Diagnostic Report message received")
+        // iDAAS DataHub Processing
+        .wireTap("direct:auditing")
+        // Send To Topic
+        .convertBodyTo(String.class).to("kafka://localhost:9092?topic=fhirsvr_diagnosticreport&brokers=localhost:9092")
+        //.setHeader(Exchange.CONTENT_TYPE,constant("application/json"))
+        //.to("jetty:http://localhost:8090/fhir-server/api/v4/diagnosticreport?bridgeEndpoint=true&exchangePattern=InOut")
+        //Process Response
+        //.convertBodyTo(String.class)
+        // set Auditing Properties
+        //.setProperty("processingtype").constant("data")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
+        //.setProperty("industrystd").constant("FHIR")
+        //.setProperty("messagetrigger").constant("DiagnosticReport")
+        //.setProperty("component").simple("${routeId}")
+        //.setProperty("processname").constant("Response")
+        //.setProperty("camelID").simple("${camelId}")
+        //.setProperty("exchangeID").simple("${exchangeId}")
+        //.setProperty("internalMsgID").simple("${id}")
+        //.setProperty("bodyData").simple("${body}")
+        //.setProperty("auditdetails").constant("Diagnostic Report FHIR response message received")
+        // iDAAS DataHub Processing
+        //.wireTap("direct:auditing")
+    ;
     from("servlet://diagnosticresult")
         .routeId("FHIRDiagnosticResult")
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("DiagnosticResult")
         .setProperty("component").simple("${routeId}")
@@ -697,7 +735,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("deviceresult")
         //.setProperty("component").simple("${routeId}")
@@ -710,12 +748,50 @@ public class CamelConfiguration extends RouteBuilder {
         // iDAAS DataHub Processing
         //.wireTap("direct:auditing")
     ;
+    from("servlet://documentreference")
+        .routeId("FHIRDocumentReference")
+        .convertBodyTo(String.class)
+        // set Auditing Properties
+        .setProperty("processingtype").constant("data")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
+        .setProperty("industrystd").constant("FHIR")
+        .setProperty("messagetrigger").constant("Document Reference")
+        .setProperty("component").simple("${routeId}")
+        .setProperty("camelID").simple("${camelId}")
+        .setProperty("exchangeID").simple("${exchangeId}")
+        .setProperty("internalMsgID").simple("${id}")
+        .setProperty("bodyData").simple("${body}")
+        .setProperty("processname").constant("Input")
+        .setProperty("auditdetails").constant("Document Reference message received")
+        // iDAAS DataHub Processing
+        .wireTap("direct:auditing")
+        // Send To Topic
+        .convertBodyTo(String.class).to("kafka://localhost:9092?topic=fhirsvr_documentreference&brokers=localhost:9092")
+        //.setHeader(Exchange.CONTENT_TYPE,constant("application/json"))
+        //.to("jetty:http://localhost:8090/fhir-server/api/v4/documentreference?bridgeEndpoint=true&exchangePattern=InOut")
+        //Process Response
+        //.convertBodyTo(String.class)
+        // set Auditing Properties
+        //.setProperty("processingtype").constant("data")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
+        //.setProperty("industrystd").constant("FHIR")
+        //.setProperty("messagetrigger").constant("Document Reference")
+        //.setProperty("component").simple("${routeId}")
+        //.setProperty("processname").constant("Response")
+        //.setProperty("camelID").simple("${camelId}")
+        //.setProperty("exchangeID").simple("${exchangeId}")
+        //.setProperty("internalMsgID").simple("${id}")
+        //.setProperty("bodyData").simple("${body}")
+        //.setProperty("auditdetails").constant("Document Reference FHIR response message received")
+        // iDAAS DataHub Processing
+        //.wireTap("direct:auditing")
+    ;
     from("servlet://effectevidencesynthesis")
         .routeId("FHIREffectEvidenceSynthesis")
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("EffectEvidenceSynthesis")
         .setProperty("component").simple("${routeId}")
@@ -735,7 +811,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("effectevidencesynthesis")
         //.setProperty("component").simple("${routeId}")
@@ -753,7 +829,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("Encounter")
         .setProperty("component").simple("${routeId}")
@@ -773,7 +849,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("encounter")
         //.setProperty("component").simple("${routeId}")
@@ -791,7 +867,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("EpisodeOfCare")
         .setProperty("component").simple("${routeId}")
@@ -811,7 +887,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("episodeofcare")
         //.setProperty("component").simple("${routeId}")
@@ -829,7 +905,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("Evidence")
         .setProperty("component").simple("${routeId}")
@@ -849,7 +925,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("evidence")
         //.setProperty("component").simple("${routeId}")
@@ -867,7 +943,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("EvidenceVariable")
         .setProperty("component").simple("${routeId}")
@@ -887,7 +963,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("evidencevariable")
         //.setProperty("component").simple("${routeId}")
@@ -905,7 +981,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("Goal")
         .setProperty("component").simple("${routeId}")
@@ -925,7 +1001,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("goal")
         //.setProperty("component").simple("${routeId}")
@@ -943,7 +1019,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("HealthcareService")
         .setProperty("component").simple("${routeId}")
@@ -963,7 +1039,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("healthcareservice")
         //.setProperty("component").simple("${routeId}")
@@ -981,7 +1057,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("ImagingStudy")
         .setProperty("component").simple("${routeId}")
@@ -1001,7 +1077,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("imagingstudy")
         //.setProperty("component").simple("${routeId}")
@@ -1014,12 +1090,50 @@ public class CamelConfiguration extends RouteBuilder {
         // iDAAS DataHub Processing
         //.wireTap("direct:auditing")
     ;
+     from("servlet://immunization")
+        .routeId("FHIRImmunization")
+        .convertBodyTo(String.class)
+        // set Auditing Properties
+        .setProperty("processingtype").constant("data")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
+        .setProperty("industrystd").constant("FHIR")
+        .setProperty("messagetrigger").constant("Immunization")
+        .setProperty("component").simple("${routeId}")
+        .setProperty("camelID").simple("${camelId}")
+        .setProperty("exchangeID").simple("${exchangeId}")
+        .setProperty("internalMsgID").simple("${id}")
+        .setProperty("bodyData").simple("${body}")
+        .setProperty("processname").constant("Input")
+        .setProperty("auditdetails").constant("Immunization message received")
+        // iDAAS DataHub Processing
+        .wireTap("direct:auditing")
+        // Send To Topic
+        .convertBodyTo(String.class).to("kafka://localhost:9092?topic=fhirsvr_immunization&brokers=localhost:9092")
+        //.setHeader(Exchange.CONTENT_TYPE,constant("application/json"))
+        //.to("jetty:http://localhost:8090/fhir-server/api/v4/immunization?bridgeEndpoint=true&exchangePattern=InOut")
+        //Process Response
+        //.convertBodyTo(String.class)
+        // set Auditing Properties
+        //.setProperty("processingtype").constant("data")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
+        //.setProperty("industrystd").constant("FHIR")
+        //.setProperty("messagetrigger").constant("Immunization")
+        //.setProperty("component").simple("${routeId}")
+        //.setProperty("processname").constant("Response")
+        //.setProperty("camelID").simple("${camelId}")
+        //.setProperty("exchangeID").simple("${exchangeId}")
+        //.setProperty("internalMsgID").simple("${id}")
+        //.setProperty("bodyData").simple("${body}")
+        //.setProperty("auditdetails").constant("Immunization FHIR response message received")
+        // iDAAS DataHub Processing
+        //.wireTap("direct:auditing")
+    ;
     from("servlet://location")
         .routeId("FHIRLocation")
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("Location")
         .setProperty("component").simple("${routeId}")
@@ -1039,7 +1153,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("location")
         //.setProperty("component").simple("${routeId}")
@@ -1057,7 +1171,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("Measure")
         .setProperty("component").simple("${routeId}")
@@ -1077,7 +1191,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("measure")
         //.setProperty("component").simple("${routeId}")
@@ -1095,7 +1209,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("MeasureReport")
         .setProperty("component").simple("${routeId}")
@@ -1115,7 +1229,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("measurereport")
         //.setProperty("component").simple("${routeId}")
@@ -1133,7 +1247,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("MedicationRequest")
         .setProperty("component").simple("${routeId}")
@@ -1153,7 +1267,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("medicationrequest")
         //.setProperty("component").simple("${routeId}")
@@ -1166,14 +1280,90 @@ public class CamelConfiguration extends RouteBuilder {
         // iDAAS DataHub Processing
         //.wireTap("direct:auditing")
     ;
+     from("servlet://medication")
+        .routeId("FHIRMedication")
+        .convertBodyTo(String.class)
+        // set Auditing Properties
+        .setProperty("processingtype").constant("data")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
+        .setProperty("industrystd").constant("FHIR")
+        .setProperty("messagetrigger").constant("Medication")
+        .setProperty("component").simple("${routeId}")
+        .setProperty("camelID").simple("${camelId}")
+        .setProperty("exchangeID").simple("${exchangeId}")
+        .setProperty("internalMsgID").simple("${id}")
+        .setProperty("bodyData").simple("${body}")
+        .setProperty("processname").constant("Input")
+        .setProperty("auditdetails").constant("Medication message received")
+        // iDAAS DataHub Processing
+        .wireTap("direct:auditing")
+        // Send To Topic
+        .convertBodyTo(String.class).to("kafka://localhost:9092?topic=fhirsvr_medication&brokers=localhost:9092")
+        //.setHeader(Exchange.CONTENT_TYPE,constant("application/json"))
+        //.to("jetty:http://localhost:8090/fhir-server/api/v4/medication?bridgeEndpoint=true&exchangePattern=InOut")
+        //Process Response
+        //.convertBodyTo(String.class)
+        // set Auditing Properties
+        //.setProperty("processingtype").constant("data")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
+        //.setProperty("industrystd").constant("FHIR")
+        //.setProperty("messagetrigger").constant("Medication")
+        //.setProperty("component").simple("${routeId}")
+        //.setProperty("processname").constant("Response")
+        //.setProperty("camelID").simple("${camelId}")
+        //.setProperty("exchangeID").simple("${exchangeId}")
+        //.setProperty("internalMsgID").simple("${id}")
+        //.setProperty("bodyData").simple("${body}")
+        //.setProperty("auditdetails").constant("Medication FHIR response message received")
+        // iDAAS DataHub Processing
+        //.wireTap("direct:auditing")
+    ;
     from("servlet://medicationadministration")
         .routeId("FHIRMedicationAdministration")
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("MedicationAdministration")
+        .setProperty("component").simple("${routeId}")
+        .setProperty("camelID").simple("${camelId}")
+        .setProperty("exchangeID").simple("${exchangeId}")
+        .setProperty("internalMsgID").simple("${id}")
+        .setProperty("bodyData").simple("${body}")
+        .setProperty("processname").constant("Input")
+        .setProperty("auditdetails").constant("Medication Admin message received")
+        // iDAAS DataHub Processing
+        .wireTap("direct:auditing")
+        // Send To Topic
+        .convertBodyTo(String.class).to("kafka://localhost:9092?topic=fhirsvr_medicationadmiinistration&brokers=localhost:9092")
+        //.setHeader(Exchange.CONTENT_TYPE,constant("application/json"))
+        //.to("jetty:http://localhost:8090/fhir-server/api/v4/medicationadministration?bridgeEndpoint=true&exchangePattern=InOut")
+        //Process Response
+        //.convertBodyTo(String.class)
+        // set Auditing Properties
+        //.setProperty("processingtype").constant("data")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
+        //.setProperty("industrystd").constant("FHIR")
+        //.setProperty("messagetrigger").constant("medicationadministration")
+        //.setProperty("component").simple("${routeId}")
+        //.setProperty("processname").constant("Response")
+        //.setProperty("camelID").simple("${camelId}")
+        //.setProperty("exchangeID").simple("${exchangeId}")
+        //.setProperty("internalMsgID").simple("${id}")
+        //.setProperty("bodyData").simple("${body}")
+        //.setProperty("auditdetails").constant("Medication Admin FHIR response message received")
+        // iDAAS DataHub Processing
+        //.wireTap("direct:auditing")
+    ;
+    from("servlet://medicationstatement")
+        .routeId("FHIRMedicationStatement")
+        .convertBodyTo(String.class)
+        // set Auditing Properties
+        .setProperty("processingtype").constant("data")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
+        .setProperty("industrystd").constant("FHIR")
+        .setProperty("messagetrigger").constant("MedicationStatement")
         .setProperty("component").simple("${routeId}")
         .setProperty("camelID").simple("${camelId}")
         .setProperty("exchangeID").simple("${exchangeId}")
@@ -1184,23 +1374,23 @@ public class CamelConfiguration extends RouteBuilder {
         // iDAAS DataHub Processing
         .wireTap("direct:auditing")
         // Send To Topic
-        .convertBodyTo(String.class).to("kafka://localhost:9092?topic=fhirsvr_medicationadministration&brokers=localhost:9092")
+        .convertBodyTo(String.class).to("kafka://localhost:9092?topic=fhirsvr_medicationstatement&brokers=localhost:9092")
         //.setHeader(Exchange.CONTENT_TYPE,constant("application/json"))
-        //.to("jetty:http://localhost:8090/fhir-server/api/v4/medicationadministration?bridgeEndpoint=true&exchangePattern=InOut")
+        //.to("jetty:http://localhost:8090/fhir-server/api/v4/medicationstatement?bridgeEndpoint=true&exchangePattern=InOut")
         //Process Response
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
-        //.setProperty("messagetrigger").constant("medicationadministration")
+        //.setProperty("messagetrigger").constant("medicationstatement")
         //.setProperty("component").simple("${routeId}")
         //.setProperty("processname").constant("Response")
         //.setProperty("camelID").simple("${camelId}")
         //.setProperty("exchangeID").simple("${exchangeId}")
         //.setProperty("internalMsgID").simple("${id}")
         //.setProperty("bodyData").simple("${body}")
-        //.setProperty("auditdetails").constant("medicationadministration FHIR response message received")
+        //.setProperty("auditdetails").constant("Medication Statement FHIR response message received")
         // iDAAS DataHub Processing
         //.wireTap("direct:auditing")
     ;
@@ -1209,7 +1399,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("Observation")
         .setProperty("component").simple("${routeId}")
@@ -1229,7 +1419,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("observation")
         //.setProperty("component").simple("${routeId}")
@@ -1247,7 +1437,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("Order")
         .setProperty("component").simple("${routeId}")
@@ -1267,7 +1457,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("order")
         //.setProperty("component").simple("${routeId}")
@@ -1285,7 +1475,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("Organization")
         .setProperty("component").simple("${routeId}")
@@ -1305,7 +1495,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("organization")
         //.setProperty("component").simple("${routeId}")
@@ -1323,7 +1513,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("OrganizationAffiliation")
         .setProperty("component").simple("${routeId}")
@@ -1343,7 +1533,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("organizationaffiliation")
         //.setProperty("component").simple("${routeId}")
@@ -1361,7 +1551,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("Patient")
         .setProperty("component").simple("${routeId}")
@@ -1381,7 +1571,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("patient")
         //.setProperty("component").simple("${routeId}")
@@ -1399,7 +1589,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("Person")
         .setProperty("component").simple("${routeId}")
@@ -1419,7 +1609,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("person")
         //.setProperty("component").simple("${routeId}")
@@ -1437,7 +1627,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("Practitioner")
         .setProperty("component").simple("${routeId}")
@@ -1458,7 +1648,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("practitioner")
         //.setProperty("component").simple("${routeId}")
@@ -1476,7 +1666,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("Procedure")
         .setProperty("component").simple("${routeId}")
@@ -1497,7 +1687,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("procedure")
         //.setProperty("component").simple("${routeId}")
@@ -1515,7 +1705,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("Questionaire")
         .setProperty("component").simple("${routeId}")
@@ -1536,7 +1726,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("questionaire")
         //.setProperty("component").simple("${routeId}")
@@ -1554,7 +1744,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("QuestionaireResponse")
         .setProperty("component").simple("${routeId}")
@@ -1575,7 +1765,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("questionaireresponse")
         //.setProperty("component").simple("${routeId}")
@@ -1593,7 +1783,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("ResearchElementDefinition")
         .setProperty("component").simple("${routeId}")
@@ -1614,7 +1804,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("researchelementhdefinition")
         //.setProperty("component").simple("${routeId}")
@@ -1632,7 +1822,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("ResearchDefinition")
         .setProperty("component").simple("${routeId}")
@@ -1653,7 +1843,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("researchdefinition")
         //.setProperty("component").simple("${routeId}")
@@ -1671,7 +1861,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
          // set Auditing Properties
          .setProperty("processingtype").constant("data")
-         .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+         .setProperty("appname").constant("iDAAS-Connect-FHIR")
          .setProperty("industrystd").constant("FHIR")
          .setProperty("messagetrigger").constant("ResearchStudy")
          .setProperty("component").simple("${routeId}")
@@ -1692,7 +1882,7 @@ public class CamelConfiguration extends RouteBuilder {
          //.convertBodyTo(String.class)
          // set Auditing Properties
          //.setProperty("processingtype").constant("data")
-         //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+         //.setProperty("appname").constant("iDAAS-Connect-FHIR")
          //.setProperty("industrystd").constant("FHIR")
          //.setProperty("messagetrigger").constant("researchstudy")
          //.setProperty("component").simple("${routeId}")
@@ -1710,7 +1900,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("ResearchSubject")
         .setProperty("component").simple("${routeId}")
@@ -1731,7 +1921,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("researchsubject")
         //.setProperty("component").simple("${routeId}")
@@ -1749,7 +1939,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("Schedule")
         .setProperty("component").simple("${routeId}")
@@ -1769,7 +1959,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("schedule")
         //.setProperty("component").simple("${routeId}")
@@ -1787,7 +1977,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("ServiceRequest")
         .setProperty("component").simple("${routeId}")
@@ -1807,7 +1997,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("servicerequest")
         //.setProperty("component").simple("${routeId}")
@@ -1825,7 +2015,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("Specimen")
         .setProperty("component").simple("${routeId}")
@@ -1845,7 +2035,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("specimen")
         //.setProperty("component").simple("${routeId}")
@@ -1863,7 +2053,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("Substance")
         .setProperty("component").simple("${routeId}")
@@ -1883,7 +2073,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("substance")
         //.setProperty("component").simple("${routeId}")
@@ -1901,7 +2091,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("SupplyDelivery")
         .setProperty("component").simple("${routeId}")
@@ -1921,7 +2111,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("supplydelivery")
         //.setProperty("component").simple("${routeId}")
@@ -1939,7 +2129,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("SupplyRequest")
         .setProperty("component").simple("${routeId}")
@@ -1959,7 +2149,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("supplyrequest")
         //.setProperty("component").simple("${routeId}")
@@ -1977,7 +2167,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("TestReport")
         .setProperty("component").simple("${routeId}")
@@ -1997,7 +2187,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("testreport")
         //.setProperty("component").simple("${routeId}")
@@ -2015,7 +2205,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("TestScript")
         .setProperty("component").simple("${routeId}")
@@ -2035,7 +2225,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("testscript")
         //.setProperty("component").simple("${routeId}")
@@ -2053,7 +2243,7 @@ public class CamelConfiguration extends RouteBuilder {
         .convertBodyTo(String.class)
         // set Auditing Properties
         .setProperty("processingtype").constant("data")
-        .setProperty("appname").constant("iDAAS-ConnectClinical-IndustryStd")
+        .setProperty("appname").constant("iDAAS-Connect-FHIR")
         .setProperty("industrystd").constant("FHIR")
         .setProperty("messagetrigger").constant("VerificationResult")
         .setProperty("component").simple("${routeId}")
@@ -2073,7 +2263,7 @@ public class CamelConfiguration extends RouteBuilder {
         //.convertBodyTo(String.class)
         // set Auditing Properties
         //.setProperty("processingtype").constant("data")
-        //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+        //.setProperty("appname").constant("iDAAS-Connect-FHIR")
         //.setProperty("industrystd").constant("FHIR")
         //.setProperty("messagetrigger").constant("verificationresult")
         //.setProperty("component").simple("${routeId}")
@@ -2095,7 +2285,7 @@ public class CamelConfiguration extends RouteBuilder {
             .routeId("FHIRAccount")
             // set Auditing Properties
             .setProperty("processingtype").constant("data")
-            .setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            .setProperty("appname").constant("iDAAS-Connect-FHIR")
             .setProperty("industrystd").constant("FHIR")
             .setProperty("messagetrigger").constant("account")
             .setProperty("component").simple("${routeId}")
@@ -2116,7 +2306,7 @@ public class CamelConfiguration extends RouteBuilder {
             //.convertBodyTo(String.class)
             // set Auditing Properties
             //.setProperty("processingtype").constant("data")
-            //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            //.setProperty("appname").constant("iDAAS-Connect-FHIR")
             //.setProperty("industrystd").constant("FHIR")
             //.setProperty("messagetrigger").constant("account")
             //.setProperty("component").simple("${routeId}")
@@ -2134,7 +2324,7 @@ public class CamelConfiguration extends RouteBuilder {
             .routeId("FHIRChargeItem")
             // set Auditing Properties
             .setProperty("processingtype").constant("data")
-            .setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            .setProperty("appname").constant("iDAAS-Connect-FHIR")
             .setProperty("industrystd").constant("FHIR")
             .setProperty("messagetrigger").constant("chargeitem")
             .setProperty("component").simple("${routeId}")
@@ -2155,7 +2345,7 @@ public class CamelConfiguration extends RouteBuilder {
             //.convertBodyTo(String.class)
             // set Auditing Properties
             //.setProperty("processingtype").constant("data")
-            //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            //.setProperty("appname").constant("iDAAS-Connect-FHIR")
             //.setProperty("industrystd").constant("FHIR")
             //.setProperty("messagetrigger").constant("chargeitem")
             //.setProperty("component").simple("${routeId}")
@@ -2173,7 +2363,7 @@ public class CamelConfiguration extends RouteBuilder {
             .routeId("FHIRChargeItemDefintion")
             // set Auditing Properties
             .setProperty("processingtype").constant("data")
-            .setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            .setProperty("appname").constant("iDAAS-Connect-FHIR")
             .setProperty("industrystd").constant("FHIR")
             .setProperty("messagetrigger").constant("chargeitemdefinition")
             .setProperty("component").simple("${routeId}")
@@ -2194,7 +2384,7 @@ public class CamelConfiguration extends RouteBuilder {
             //.convertBodyTo(String.class)
             // set Auditing Properties
             //.setProperty("processingtype").constant("data")
-            //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            //.setProperty("appname").constant("iDAAS-Connect-FHIR")
             //.setProperty("industrystd").constant("FHIR")
             //.setProperty("messagetrigger").constant("chargeitemdefintion")
             //.setProperty("component").simple("${routeId}")
@@ -2212,7 +2402,7 @@ public class CamelConfiguration extends RouteBuilder {
             .routeId("FHIRContract")
             // set Auditing Properties
             .setProperty("processingtype").constant("data")
-            .setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            .setProperty("appname").constant("iDAAS-Connect-FHIR")
             .setProperty("industrystd").constant("FHIR")
             .setProperty("messagetrigger").constant("contract")
             .setProperty("component").simple("${routeId}")
@@ -2233,7 +2423,7 @@ public class CamelConfiguration extends RouteBuilder {
             //.convertBodyTo(String.class)
             // set Auditing Properties
             //.setProperty("processingtype").constant("data")
-            //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            //.setProperty("appname").constant("iDAAS-Connect-FHIR")
             //.setProperty("industrystd").constant("FHIR")
             //.setProperty("messagetrigger").constant("contract")
             //.setProperty("component").simple("${routeId}")
@@ -2252,7 +2442,7 @@ public class CamelConfiguration extends RouteBuilder {
             .convertBodyTo(String.class)
             // set Auditing Properties
             .setProperty("processingtype").constant("data")
-            .setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            .setProperty("appname").constant("iDAAS-Connect-FHIR")
             .setProperty("industrystd").constant("FHIR")
             .setProperty("messagetrigger").constant("coverage")
             .setProperty("component").simple("${routeId}")
@@ -2273,7 +2463,7 @@ public class CamelConfiguration extends RouteBuilder {
             //.convertBodyTo(String.class)
             // set Auditing Properties
             //.setProperty("processingtype").constant("data")
-            //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            //.setProperty("appname").constant("iDAAS-Connect-FHIR")
             //.setProperty("industrystd").constant("FHIR")
             //.setProperty("messagetrigger").constant("coverage")
             //.setProperty("component").simple("${routeId}")
@@ -2292,7 +2482,7 @@ public class CamelConfiguration extends RouteBuilder {
             // set Auditing Properties
             .convertBodyTo(String.class)
             .setProperty("processingtype").constant("data")
-            .setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            .setProperty("appname").constant("iDAAS-Connect-FHIR")
             .setProperty("industrystd").constant("FHIR")
             .setProperty("messagetrigger").constant("coverageeligibilityrequest")
             .setProperty("component").simple("${routeId}")
@@ -2313,7 +2503,7 @@ public class CamelConfiguration extends RouteBuilder {
             //.convertBodyTo(String.class)
             // set Auditing Properties
             //.setProperty("processingtype").constant("data")
-            //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            //.setProperty("appname").constant("iDAAS-Connect-FHIR")
             //.setProperty("industrystd").constant("FHIR")
             //.setProperty("messagetrigger").constant("coverageeligibilityrequest")
             //.setProperty("component").simple("${routeId}")
@@ -2331,7 +2521,7 @@ public class CamelConfiguration extends RouteBuilder {
             .routeId("FHIRCoverageeligibilityresponse")
             // set Auditing Properties
             .setProperty("processingtype").constant("data")
-            .setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            .setProperty("appname").constant("iDAAS-Connect-FHIR")
             .setProperty("industrystd").constant("FHIR")
             .setProperty("messagetrigger").constant("coverageeligibilityresponse")
             .setProperty("component").simple("${routeId}")
@@ -2352,7 +2542,7 @@ public class CamelConfiguration extends RouteBuilder {
             //.convertBodyTo(String.class)
             // set Auditing Properties
             //.setProperty("processingtype").constant("data")
-            //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            //.setProperty("appname").constant("iDAAS-Connect-FHIR")
             //.setProperty("industrystd").constant("FHIR")
             //.setProperty("messagetrigger").constant("coverageeligibilityresponse")
             //.setProperty("component").simple("${routeId}")
@@ -2370,7 +2560,7 @@ public class CamelConfiguration extends RouteBuilder {
             .routeId("FHIREnrollmentrequest")
             // set Auditing Properties
             .setProperty("processingtype").constant("data")
-            .setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            .setProperty("appname").constant("iDAAS-Connect-FHIR")
             .setProperty("industrystd").constant("FHIR")
             .setProperty("messagetrigger").constant("enrollmentrequest")
             .setProperty("component").simple("${routeId}")
@@ -2391,7 +2581,7 @@ public class CamelConfiguration extends RouteBuilder {
             //.convertBodyTo(String.class)
             // set Auditing Properties
             //.setProperty("processingtype").constant("data")
-            //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            //.setProperty("appname").constant("iDAAS-Connect-FHIR")
             //.setProperty("industrystd").constant("FHIR")
             //.setProperty("messagetrigger").constant("enrollmentrequest")
             //.setProperty("component").simple("${routeId}")
@@ -2409,7 +2599,7 @@ public class CamelConfiguration extends RouteBuilder {
             .routeId("FHIREnrollmentresponse")
             // set Auditing Properties
             .setProperty("processingtype").constant("data")
-            .setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            .setProperty("appname").constant("iDAAS-Connect-FHIR")
             .setProperty("industrystd").constant("FHIR")
             .setProperty("messagetrigger").constant("enrollmentresponse")
             .setProperty("component").simple("${routeId}")
@@ -2430,7 +2620,7 @@ public class CamelConfiguration extends RouteBuilder {
             //.convertBodyTo(String.class)
             // set Auditing Properties
             //.setProperty("processingtype").constant("data")
-            //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            //.setProperty("appname").constant("iDAAS-Connect-FHIR")
             //.setProperty("industrystd").constant("FHIR")
             //.setProperty("messagetrigger").constant("enrollmentresponse")
             //.setProperty("component").simple("${routeId}")
@@ -2448,7 +2638,7 @@ public class CamelConfiguration extends RouteBuilder {
             .routeId("FHIRExplanationofbenefits")
             // set Auditing Properties
             .setProperty("processingtype").constant("data")
-            .setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            .setProperty("appname").constant("iDAAS-Connect-FHIR")
             .setProperty("industrystd").constant("FHIR")
             .setProperty("messagetrigger").constant("explanationofbenefits")
             .setProperty("component").simple("${routeId}")
@@ -2469,7 +2659,7 @@ public class CamelConfiguration extends RouteBuilder {
             //.convertBodyTo(String.class)
             // set Auditing Properties
             //.setProperty("processingtype").constant("data")
-            //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            //.setProperty("appname").constant("iDAAS-Connect-FHIR")
             //.setProperty("industrystd").constant("FHIR")
             //.setProperty("messagetrigger").constant("explanationofbenefits")
             //.setProperty("component").simple("${routeId}")
@@ -2486,7 +2676,7 @@ public class CamelConfiguration extends RouteBuilder {
             .routeId("FHIRInsuranceplan")
             // set Auditing Properties
             .setProperty("processingtype").constant("data")
-            .setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            .setProperty("appname").constant("iDAAS-Connect-FHIR")
             .setProperty("industrystd").constant("FHIR")
             .setProperty("messagetrigger").constant("insuranceplan")
             .setProperty("component").simple("${routeId}")
@@ -2503,7 +2693,7 @@ public class CamelConfiguration extends RouteBuilder {
             //.convertBodyTo(String.class)
             // set Auditing Properties
             //.setProperty("processingtype").constant("data")
-            //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            //.setProperty("appname").constant("iDAAS-Connect-FHIR")
             //.setProperty("industrystd").constant("FHIR")
             //.setProperty("messagetrigger").constant("insuranceplan")
             //.setProperty("component").simple("${routeId}")
@@ -2521,7 +2711,7 @@ public class CamelConfiguration extends RouteBuilder {
             .routeId("FHIRClaim")
             // set Auditing Properties
             .setProperty("processingtype").constant("data")
-            .setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            .setProperty("appname").constant("iDAAS-Connect-FHIR")
             .setProperty("industrystd").constant("FHIR")
             .setProperty("messagetrigger").constant("claim")
             .setProperty("component").simple("${routeId}")
@@ -2542,7 +2732,7 @@ public class CamelConfiguration extends RouteBuilder {
             //.convertBodyTo(String.class)
             // set Auditing Properties
             //.setProperty("processingtype").constant("data")
-            //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            //.setProperty("appname").constant("iDAAS-Connect-FHIR")
             //.setProperty("industrystd").constant("FHIR")
             //.setProperty("messagetrigger").constant("claim")
             //.setProperty("component").simple("${routeId}")
@@ -2560,7 +2750,7 @@ public class CamelConfiguration extends RouteBuilder {
             .routeId("FHIRClaimresponse")
             // set Auditing Properties
             .setProperty("processingtype").constant("data")
-            .setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            .setProperty("appname").constant("iDAAS-Connect-FHIR")
             .setProperty("industrystd").constant("FHIR")
             .setProperty("messagetrigger").constant("claimresponse")
             .setProperty("component").simple("${routeId}")
@@ -2581,7 +2771,7 @@ public class CamelConfiguration extends RouteBuilder {
             //.convertBodyTo(String.class)
             // set Auditing Properties
             //.setProperty("processingtype").constant("data")
-            //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            //.setProperty("appname").constant("iDAAS-Connect-FHIR")
             //.setProperty("industrystd").constant("FHIR")
             //.setProperty("messagetrigger").constant("claimresponse")
             //.setProperty("component").simple("${routeId}")
@@ -2599,7 +2789,7 @@ public class CamelConfiguration extends RouteBuilder {
             .routeId("FHIRInvoice")
             // set Auditing Properties
             .setProperty("processingtype").constant("data")
-            .setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            .setProperty("appname").constant("iDAAS-Connect-FHIR")
             .setProperty("industrystd").constant("FHIR")
             .setProperty("messagetrigger").constant("invoice")
             .setProperty("component").simple("${routeId}")
@@ -2620,7 +2810,7 @@ public class CamelConfiguration extends RouteBuilder {
             //.convertBodyTo(String.class)
             // set Auditing Properties
             //.setProperty("processingtype").constant("data")
-            //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            //.setProperty("appname").constant("iDAAS-Connect-FHIR")
             //.setProperty("industrystd").constant("FHIR")
             //.setProperty("messagetrigger").constant("invoice")
             //.setProperty("component").simple("${routeId}")
@@ -2638,7 +2828,7 @@ public class CamelConfiguration extends RouteBuilder {
             .routeId("FHIRPaymentnotice")
             // set Auditing Properties
             .setProperty("processingtype").constant("data")
-            .setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            .setProperty("appname").constant("iDAAS-Connect-FHIR")
             .setProperty("industrystd").constant("FHIR")
             .setProperty("messagetrigger").constant("paymentnotice")
             .setProperty("component").simple("${routeId}")
@@ -2659,7 +2849,7 @@ public class CamelConfiguration extends RouteBuilder {
             //.convertBodyTo(String.class)
             // set Auditing Properties
             //.setProperty("processingtype").constant("data")
-            //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            //.setProperty("appname").constant("iDAAS-Connect-FHIR")
             //.setProperty("industrystd").constant("FHIR")
             //.setProperty("messagetrigger").constant("paymentnotice")
             //.setProperty("component").simple("${routeId}")
@@ -2677,7 +2867,7 @@ public class CamelConfiguration extends RouteBuilder {
             .routeId("FHIRPaymentreconciliation")
             // set Auditing Properties
             .setProperty("processingtype").constant("data")
-            .setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            .setProperty("appname").constant("iDAAS-Connect-FHIR")
             .setProperty("industrystd").constant("FHIR")
             .setProperty("messagetrigger").constant("paymentreconciliation")
             .setProperty("component").simple("${routeId}")
@@ -2694,7 +2884,7 @@ public class CamelConfiguration extends RouteBuilder {
             //.convertBodyTo(String.class)
             // set Auditing Properties
             //.setProperty("processingtype").constant("data")
-            //.setProperty("appname").constant("iDAAS-ConnectFinancial-IndustryStd")
+            //.setProperty("appname").constant("iDAAS-Connect-FHIR")
             //.setProperty("industrystd").constant("FHIR")
             //.setProperty("messagetrigger").constant("paymentreconciliation")
             //.setProperty("component").simple("${routeId}")
