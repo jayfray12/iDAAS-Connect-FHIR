@@ -15,6 +15,14 @@ resources to work locally: <br/>
 and also building and packaging the solution as well. All the scripts are named to describe their capabilities <br/>
 3. platform-testdata: sample transactions to leverage for using the platform. 
 
+For this particular repository it has been tested and works with multiple FHIR servers. <br/>
+<a href="https://github.com/hapifhir/hapi-fhir-jpaserver-starter" target="_blank">HAPI FHIR JPA Server</a><br/> 
+<a href="https://github.com/IBM/FHIR" target="_blank">IBM FHIR Server</a><br/>
+<a href="https://github.com/microsoft/fhir-server" target="_blank">Microsoft Azure FHIR Server</a><br/>
+
+Which ever FHIR server you implement you will need to follow the specific install instructions from each vendor. 
+While we have tested with all three of them there could be a need to reconfigure the connectivity details to it. 
+
 ## Scenario: Integration 
 This repository follows a very common general facility based implementation. The implementation
 is of a facility, we have named MCTN for an application we have named MMS. This implementation 
@@ -22,8 +30,8 @@ specifically defines one FHIR endpoint per FHIR resource.
 
 ### Integration Data Flow Steps
  
-1. The FHIR client does a post (external to this application) to a specifically defined URL 
-endpoint. It posts the transactions and gets a response back.
+1. This respository acts as an HTTP/HTTP(s) secure endpoint for processing FHIR Data. Each FHIR Resource has a 
+specifically defined URL endpoint. It posts the transactions and gets a response back.
 2. iDAAS Connect FHIR will do the following actions:<br/>
     a. Receive the FHIR message. Internally, it will audit the data it received to 
     a specifically defined topic.<br/>
