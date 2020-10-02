@@ -21,9 +21,6 @@ import org.apache.camel.ExchangePattern;
 import org.apache.camel.LoggingLevel;
 import org.apache.camel.MultipleConsumersSupport;
 import org.apache.camel.builder.RouteBuilder;
-import org.apache.camel.component.hl7.HL7;
-import org.apache.camel.component.hl7.HL7MLLPNettyDecoderFactory;
-import org.apache.camel.component.hl7.HL7MLLPNettyEncoderFactory;
 import org.apache.camel.component.kafka.KafkaComponent;
 import org.apache.camel.component.kafka.KafkaConstants;
 import org.apache.camel.component.kafka.KafkaEndpoint;
@@ -32,6 +29,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.jms.connection.JmsTransactionManager;
 //import javax.jms.ConnectionFactory;
 import org.springframework.stereotype.Component;
@@ -41,6 +40,9 @@ import java.time.LocalDate;
 @Component
 public class CamelConfiguration extends RouteBuilder {
   private static final Logger log = LoggerFactory.getLogger(CamelConfiguration.class);
+
+  @Autowired
+  private ConfigProperties config;
 
   @Bean
   private KafkaEndpoint kafkaEndpoint(){
@@ -63,6 +65,16 @@ public class CamelConfiguration extends RouteBuilder {
     mapping.setServlet(new CamelHttpTransportServlet());
     mapping.addUrlMappings("/camel/*");
     return mapping;
+  }
+
+  private String getKafkaTopicUri(String topic) {
+    return "kafka:" + topic +
+            "?brokers=" +
+            config.getKafkaBrokers();
+  }
+
+  private String getFHIRServerUri(int port) {
+    return "netty4:tcp://0.0.0.0:" + port + "?sync=true&decoder=#hl7Decoder&encoder=#hl7Encoder";
   }
 
   /*
