@@ -73,8 +73,23 @@ public class CamelConfiguration extends RouteBuilder {
             config.getKafkaBrokers();
   }
 
-  private String getFHIRServerUri(int port) {
-    return "netty4:tcp://0.0.0.0:" + port + "?sync=true&decoder=#hl7Decoder&encoder=#hl7Encoder";
+  private String getFHIRServerUri(String fhirResource) {
+    String fhirServerVendor = config.getFhirVendor();
+    String fhirServerURI = null;
+    if (fhirServerVendor.equals("ibm"))
+    {
+      //.to("jetty:http://localhost:8090/fhir-server/api/v4/AdverseEvents?bridgeEndpoint=true&exchangePattern=InOut")
+      fhirServerURI = "jetty:"+config.getIbmURI()+fhirResource+"?bridgeEndpoint=true&exchangePattern=InOut";
+    }
+    if (fhirServerVendor.equals("hapi"))
+    {
+      fhirServerURI = "jetty:"+config.getHapiURI()+fhirResource+"?bridgeEndpoint=true&exchangePattern=InOut";
+    }
+    if (fhirServerVendor.equals("microsoft"))
+    {
+      fhirServerURI = "jetty:"+config.getMicrosoftURI()+fhirResource+"?bridgeEndpoint=true&exchangePattern=InOut";
+    }
+    return fhirServerURI;
   }
 
   /*
