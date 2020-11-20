@@ -23,6 +23,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class ConfigProperties {
 
     private String kafkaBrokers;
+    private String kafkaBaseURL;
 
     private String fhirVendor;
 
@@ -60,5 +61,13 @@ public class ConfigProperties {
     public void setIbmURI (String ibmURI) { this.ibmURI = ibmURI; }
     public void setHapiURI (String hapiURI) { this.hapiURI = hapiURI; }
     public void setMicrosoftURI (String microsoftURI) { this.microsoftURI = microsoftURI; }
+
+    public String getKafkaBaseURL() {
+        return kafkaBaseURL;
+    }
+
+    public void setKafkaBaseURL(String kafkaBaseURL) {
+        this.kafkaBaseURL = kafkaBaseURL;
+    }
 
 }
